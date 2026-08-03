@@ -148,38 +148,6 @@ nav {
 .delivery-note { margin: 20px 4px 0; font-size: 13px; color: #777777; display: flex; align-items: center; gap: 8px; }
 .dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: #111111; }
 
-/* ---------- TRANSFERENCIA ---------- */
-.transfer-card { margin-top: 40px; padding: 32px; border: 1px solid #111111; }
-.transfer-title {
-  margin: 0 0 6px; font-family: 'Oswald', sans-serif; font-weight: 600;
-  font-size: 20px; letter-spacing: .04em; text-transform: uppercase;
-}
-.transfer-sub { margin: 0 0 24px; font-size: 13.5px; line-height: 1.6; color: #777777; max-width: 480px; text-wrap: pretty; }
-.transfer-rows { display: flex; flex-direction: column; gap: 14px; }
-.transfer-row {
-  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-  padding: 14px 18px; background: #f6f6f4; border-radius: 10px;
-}
-.transfer-label {
-  flex: none; width: 56px; font-size: 11px; font-weight: 700;
-  letter-spacing: .1em; text-transform: uppercase; color: #777777;
-}
-.transfer-value {
-  flex: 1; font-family: 'Oswald', sans-serif; font-weight: 600;
-  font-size: 15px; letter-spacing: .03em; word-break: break-all;
-}
-.transfer-copy {
-  flex: none; font-family: 'Archivo', sans-serif; font-size: 11px; font-weight: 700;
-  letter-spacing: .08em; text-transform: uppercase; padding: 9px 18px;
-  border-radius: 999px; background: #111111; color: #ffffff; border: none; cursor: pointer;
-  transition: background .2s;
-}
-.transfer-copy:hover { background: #333333; }
-@media (max-width: 480px) {
-  .transfer-row { gap: 8px; }
-  .transfer-label { width: auto; }
-}
-
 /* ---------- SOBRE ---------- */
 .about { background: #f6f6f4; scroll-margin-top: 64px; }
 .about-inner {
