@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Romi Garino — Planes de entrenamiento online</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav>
+  <a href="#top" class="brand">
+    <!-- Cuando tengas el logo: <img src="assets/logo-fox.png" alt="" class="brand-logo"> -->
+    <span class="wordmark">Romi Garino</span>
+  </a>
+  <div class="nav-right">
+    <a href="#planes" class="nav-link" data-i18n="navPlans">Planes</a>
+    <a href="#sobre" class="nav-link" data-i18n="navAbout">Sobre Romi</a>
+    <a href="#testimonios" class="nav-link" data-i18n="navTesti">Testimonios</a>
+    <button id="lang-toggle" class="lang-btn">EN</button>
+    <a href="#planes" class="btn btn-dark btn-sm" data-i18n="navCta">Comprar plan</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="top" class="hero">
+  <div>
+    <p class="eyebrow" data-i18n="heroEyebrow">Entrenamiento online · Rutinas por WhatsApp y email</p>
+    <h1 class="hero-title"><span data-i18n="heroTitle1">Entrená donde</span><br><span data-i18n="heroTitle2">estés.</span></h1>
+    <p class="hero-sub" data-i18n="heroSub">Tres planes de entrenamiento diseñados por Romi Garino. Elegí según el material que tengas — o recibí el kit completo en tu casa.</p>
+    <div class="hero-ctas">
+      <a href="#planes" class="btn btn-dark" data-i18n="heroCta">Ver planes</a>
+      <a href="#sobre" class="btn btn-ghost" data-i18n="heroCta2">Conocé a Romi</a>
+    </div>
+  </div>
+  <figure class="hero-figure">
+    <img src="assets/romi-hero.jpg" alt="Romi Garino">
+  </figure>
+</header>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-text"></span><span class="ticker-text"></span>
+  </div>
+</div>
+
+<!-- ============ PLANES ============ -->
+<section id="planes" class="section">
+  <div class="section-head">
+    <h2 class="section-title" data-i18n="plansTitle">Elegí tu plan</h2>
+    <p class="section-note" data-i18n="plansSub">El precio varía según el material: entrená con lo que tenés, sumate al programa online o recibí todo el equipamiento en casa.</p>
+  </div>
+  <div class="plans" id="plans"></div>
+  <p class="delivery-note"><span class="dot"></span><span data-i18n="deliveryNote">Todas las rutinas se envían por WhatsApp o email dentro de las 24 h de la compra.</span></p>
+
+  <div class="transfer-card">
+    <h3 class="transfer-title" data-i18n="transferTitle">Transferencia bancaria</h3>
+    <p class="transfer-sub" data-i18n="transferSub">¿Preferís transferir? Usá estos datos y avisanos por WhatsApp para coordinar tu plan.</p>
+    <div class="transfer-rows">
+      <div class="transfer-row">
+        <span class="transfer-label" data-i18n="transferCvuLabel">CVU</span>
+        <span class="transfer-value" id="transfer-cvu"></span>
+        <button type="button" class="transfer-copy" data-copy-target="transfer-cvu" data-i18n="transferCopy">Copiar</button>
+      </div>
+      <div class="transfer-row">
+        <span class="transfer-label" data-i18n="transferAliasLabel">Alias</span>
+        <span class="transfer-value" id="transfer-alias"></span>
+        <button type="button" class="transfer-copy" data-copy-target="transfer-alias" data-i18n="transferCopy">Copiar</button>
+      </div>
+      <div class="transfer-row">
+        <span class="transfer-label" data-i18n="transferTitularLabel">Titular</span>
+        <span class="transfer-value" id="transfer-titular"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section id="sobre" class="about">
+  <div class="about-inner">
+    <figure class="about-figure"><img src="assets/romi-sobre.jpg" alt="Romi Garino"></figure>
+    <div>
+      <p class="eyebrow" data-i18n="aboutEyebrow">La marca</p>
+      <h2 class="section-title">Romi Garino</h2>
+      <p class="body-text" data-i18n="aboutP1">Coach de cross training y fitness funcional. Romi diseña cada rutina para que progreses con el material que tengas a mano, sin excusas y sin gimnasio.</p>
+      <div class="stats">
+        <div class="stat"><strong>+10</strong><span data-i18n="statYears">Años entrenando</span></div>
+        <div class="stat"><strong>+300</strong><span data-i18n="statAthletes">Alumnos</span></div>
+        <div class="stat"><strong>3</strong><span data-i18n="statPlans">Planes online</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section id="testimonios" class="section">
+  <h2 class="section-title mb-lg" data-i18n="testiTitle">Lo que dicen</h2>
+  <div class="testimonials" id="testimonials"></div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <h2 class="footer-title" data-i18n="footTitle">¿Dudas antes de empezar?</h2>
+        <p class="footer-sub" data-i18n="footSub">Escribinos por WhatsApp y te ayudamos a elegir el plan según tu material y tu nivel.</p>
+      </div>
+      <a href="#" class="btn btn-light" data-wa>WhatsApp</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Romi Garino</span>
+      <span class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#" data-wa>WhatsApp</a>
+        <a href="mailto:hola@romigarino.com">Email</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
