@@ -41,8 +41,8 @@ const I18N = {
     ],
     testimonios: [
       { name: 'Virginia', plan: 'Home Pro', text: 'Los cambios se notan mucho más rápido.' },
-      { name: 'Mauro', plan: 'Battle Fox Online', text: 'Encontré la manera de entrenar en casa y no perder el ritmo.' },
-      { name: 'Marian', plan: 'Home Básico', text: 'Empecé desde cero y hoy entreno 4 veces por semana. Romi responde siempre.' }
+      { name: 'Mauro', plan: 'Battle Fox Online', text: 'Empecé desde cero y hoy entreno 4 veces por semana. Romi responde siempre.' },
+      { name: 'Marian', plan: 'Home Básico', text: 'Encontré la manera de entrenar en casa y no perder el ritmo.' }
     ]
   },
   en: {
@@ -72,8 +72,8 @@ const I18N = {
     ],
     testimonios: [
       { name: 'Virginia', plan: 'Home Pro', text: 'The results show up so much faster.' },
-      { name: 'Mauro', plan: 'Battle Fox Online', text: 'I found a way to train at home without losing momentum.' },
-      { name: 'Marian', plan: 'Home Básico', text: 'I started from zero and now train 4 times a week. Romi always answers.' }
+      { name: 'Mauro', plan: 'Battle Fox Online', text: 'I started from zero and now train 4 times a week. Romi always answers.' },
+      { name: 'Marian', plan: 'Home Básico', text: 'I found a way to train at home without losing momentum.' }
     ]
   }
 };
