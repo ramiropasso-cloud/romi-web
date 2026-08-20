@@ -118,7 +118,6 @@ nav {
   font-size: clamp(38px, 4.5vw, 60px); line-height: 1; text-transform: uppercase;
 }
 .mb-lg { margin-bottom: 48px; }
-.section-note { margin: 0; max-width: 380px; font-size: 14px; line-height: 1.6; color: #777777; text-wrap: pretty; }
 
 /* ---------- PLANES ---------- */
 .plans { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid #111111; }
