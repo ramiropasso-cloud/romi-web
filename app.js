@@ -62,7 +62,7 @@ const I18N = {
     perMonth: '/ mo', buy: 'Subscribe', mpNote: 'Secure checkout via Mercado Pago',
     deliveryNote: 'All routines are delivered via WhatsApp or email within 24 h of purchase.',
     aboutEyebrow: 'The brand', statYears: 'Years coaching', statAthletes: 'Athletes', statPlans: 'Online plans',
-    aboutP1: 'Cross-training and functional fitness coach. Romi designs every routine so you progress with whatever gear you have — no excuses.',
+    aboutP1: 'Cross-training and functional fitness coach. Romi designs every routine so you can progress with whatever gear you have — no excuses.',
     testiTitle: 'What they say',
     footTitle: 'Questions before starting?',
     footSub: 'Message us on WhatsApp and we’ll help you pick a plan based on your gear and level.',
