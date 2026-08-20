@@ -3,6 +3,15 @@
    ========================================================= */
 const CONFIG = {
   whatsapp: '5492302354724',            // sin + ni espacios
+  // Fotos del slider del header. Agregá o sacá las que quieras.
+  fotos: [
+    { src: 'assets/hero-1.jpg', alt: 'Romi entrenando' },
+    { src: 'assets/hero-2.jpg', alt: 'Romi entrenando' },
+    { src: 'assets/hero-3.jpg', alt: 'Romi entrenando' },
+    { src: 'assets/hero-4.jpg', alt: 'Romi entrenando' },
+    { src: 'assets/hero-5.jpg', alt: 'Romi entrenando' }
+  ],
+  slideSegundos: 4,                     // cada cuánto cambia la foto
   pagos: {
     basico: 'https://mpago.la/2PDgEeE',
     battle: 'https://mpago.la/28miEBH',   // se muestra como "Home Pro"
@@ -29,7 +38,6 @@ const I18N = {
     testiTitle: 'Lo que dicen',
     footTitle: '¿Dudas antes de empezar?',
     footSub: 'Escribinos por WhatsApp y te ayudamos a elegir el plan según tu material y tu nivel.',
-    ticker: 'Sin excusas · Entrená hoy · Home Básico $40.000 · Home Pro $50.000 · Battle Fox $60.000 · ',
     badgePopular: 'Más elegido',
     planes: [
       { id: 'basico', name: 'Home Básico', price: 40000, desc: 'Entrená con lo que ya tenés en tu casa.',
@@ -60,7 +68,6 @@ const I18N = {
     testiTitle: 'What they say',
     footTitle: 'Questions before starting?',
     footSub: 'Message us on WhatsApp and we’ll help you pick a plan based on your gear and level.',
-    ticker: 'No excuses · Train today · Home Básico $40.000 · Home Pro $50.000 · Battle Fox $60.000 · ',
     badgePopular: 'Most popular',
     planes: [
       { id: 'basico', name: 'Home Básico', price: 40000, desc: 'Train with what you already have at home.',
@@ -92,7 +99,6 @@ function render() {
     if (t[key]) el.textContent = t[key];
   });
 
-  document.querySelectorAll('.ticker-text').forEach(el => { el.textContent = t.ticker.repeat(3); });
   document.getElementById('lang-toggle').textContent = lang === 'en' ? 'ES' : 'EN';
 
   const wa = 'https://wa.me/' + CONFIG.whatsapp;
@@ -121,6 +127,45 @@ function render() {
       </figcaption>
     </figure>`).join('');
 }
+
+/* =========================================================
+   SLIDER DEL HEADER
+   ========================================================= */
+(function slider() {
+  const frame = document.getElementById('slider-frame');
+  const dots  = document.getElementById('slider-dots');
+  const fotos = CONFIG.fotos;
+  if (!frame || !fotos.length) return;
+
+  fotos.forEach((f, i) => {
+    const img = document.createElement('img');
+    img.src = f.src;
+    img.alt = f.alt || '';
+    if (i === 0) img.className = 'is-active';
+    frame.prepend(img);
+
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('aria-label', 'Foto ' + (i + 1));
+    if (i === 0) dot.className = 'is-active';
+    dot.addEventListener('click', () => go(i));
+    dots.appendChild(dot);
+  });
+
+  const imgs = frame.querySelectorAll('img');
+  let index = 0, timer;
+
+  function paint() {
+    imgs.forEach((el, i) => el.classList.toggle('is-active', i === index));
+    dots.querySelectorAll('button').forEach((el, i) => el.classList.toggle('is-active', i === index));
+  }
+  function go(i) { index = (i + fotos.length) % fotos.length; paint(); start(); }
+  function start() { clearInterval(timer); timer = setInterval(() => go(index + 1), CONFIG.slideSegundos * 1000); }
+
+  document.getElementById('slider-prev').addEventListener('click', () => go(index - 1));
+  document.getElementById('slider-next').addEventListener('click', () => go(index + 1));
+  start();
+})();
 
 document.getElementById('lang-toggle').addEventListener('click', () => {
   lang = lang === 'en' ? 'es' : 'en';

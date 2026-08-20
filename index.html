@@ -21,33 +21,33 @@
     <a href="#planes" class="nav-link" data-i18n="navPlans">Planes</a>
     <a href="#sobre" class="nav-link" data-i18n="navAbout">Sobre Romi</a>
     <a href="#testimonios" class="nav-link" data-i18n="navTesti">Testimonios</a>
-    <button id="lang-toggle" class="lang-btn">EN</button>
+    <button type="button" id="lang-toggle" class="lang-btn">EN</button>
     <a href="#planes" class="btn btn-dark btn-sm" data-i18n="navCta">Comprar plan</a>
   </div>
 </nav>
 
 <!-- ============ HERO ============ -->
-<header id="top" class="hero">
-  <div>
-    <p class="eyebrow" data-i18n="heroEyebrow">Entrenamiento online · Rutinas por WhatsApp y email</p>
-    <h1 class="hero-title"><span data-i18n="heroTitle1">Entrená donde</span><br><span data-i18n="heroTitle2">estés.</span></h1>
-    <p class="hero-sub" data-i18n="heroSub">Tres planes de entrenamiento diseñados por Romi Garino. Elegí según el material que tengas — o recibí el kit completo en tu casa.</p>
-    <div class="hero-ctas">
-      <a href="#planes" class="btn btn-dark" data-i18n="heroCta">Ver planes</a>
-      <a href="#sobre" class="btn btn-ghost" data-i18n="heroCta2">Conocé a Romi</a>
+<header id="top">
+  <div class="hero-text">
+    <div>
+      <p class="eyebrow" data-i18n="heroEyebrow">Entrenamiento online · Rutinas por WhatsApp y email</p>
+      <h1 class="hero-title"><span data-i18n="heroTitle1">Entrená donde</span><br><span data-i18n="heroTitle2">estés.</span></h1>
+    </div>
+    <div class="hero-aside">
+      <p class="hero-sub" data-i18n="heroSub">Tres planes de entrenamiento diseñados por Romi Garino.</p>
+      <div class="hero-ctas">
+        <a href="#planes" class="btn btn-dark" data-i18n="heroCta">Ver planes</a>
+        <a href="#sobre" class="btn btn-ghost" data-i18n="heroCta2">Conocé a Romi</a>
+      </div>
     </div>
   </div>
-  <figure class="hero-figure">
-    <img src="assets/romi-hero.jpg" alt="Romi Garino">
-  </figure>
-</header>
-
-<!-- ============ TICKER ============ -->
-<div class="ticker">
-  <div class="ticker-track">
-    <span class="ticker-text"></span><span class="ticker-text"></span>
+  <!-- Slider a todo el ancho. Las fotos se listan en app.js → CONFIG.fotos -->
+  <div class="slider-frame" id="slider-frame">
+    <button type="button" class="slider-arrow prev" id="slider-prev" aria-label="Anterior">&lsaquo;</button>
+    <button type="button" class="slider-arrow next" id="slider-next" aria-label="Siguiente">&rsaquo;</button>
+    <div class="slider-dots" id="slider-dots"></div>
   </div>
-</div>
+</header>
 
 <!-- ============ PLANES ============ -->
 <section id="planes" class="section">

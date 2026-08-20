@@ -30,7 +30,11 @@ const CONFIG = {
 **Colores y tipografía** → `styles.css` (paleta blanco #ffffff / negro #111111;
 fuentes Oswald + Archivo desde Google Fonts).
 
-**Imágenes** → reemplazá los archivos en `assets/` manteniendo el nombre.
+**Fotos del slider del header** → poné los archivos en `assets/` y listalos en
+`CONFIG.fotos` (app.js). Podés poner las que quieras; los puntos indicadores
+se generan solos. `CONFIG.slideSegundos` controla la velocidad.
+
+**Otras imágenes** → reemplazá los archivos en `assets/` manteniendo el nombre.
 
 ## Logo del zorro
 
