@@ -1,4 +1,4 @@
-# Romi Garino — web de planes de entrenamiento
+# Romina Garino — web de planes de entrenamiento
 
 Sitio estático: HTML + CSS + JS, sin build ni dependencias.
 

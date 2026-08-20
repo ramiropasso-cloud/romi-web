@@ -7,10 +7,10 @@ const CONFIG = {
   // "pos" (opcional) es el object-position del recorte, por si una foto
   // necesita mostrar más de un costado (ej: la cara queda a un lado).
   fotos: [
-    { src: 'assets/hero-2.jpg', alt: 'Romi entrenando' },
-    { src: 'assets/hero-3.jpg', alt: 'Romi entrenando', pos: '78% center' },
-    { src: 'assets/hero-4.jpg', alt: 'Romi entrenando' },
-    { src: 'assets/hero-5.jpg', alt: 'Romi entrenando' }
+    { src: 'assets/hero-2.jpg', alt: 'Romina entrenando' },
+    { src: 'assets/hero-3.jpg', alt: 'Romina entrenando', pos: '78% center' },
+    { src: 'assets/hero-4.jpg', alt: 'Romina entrenando' },
+    { src: 'assets/hero-5.jpg', alt: 'Romina entrenando' }
   ],
   slideSegundos: 4,                     // cada cuánto cambia la foto
   pagos: {
@@ -25,16 +25,16 @@ const CONFIG = {
    ========================================================= */
 const I18N = {
   es: {
-    navPlans: 'Planes', navAbout: 'Sobre Romi', navTesti: 'Testimonios', navCta: 'Comprar plan',
+    navPlans: 'Planes', navAbout: 'Sobre Romina', navTesti: 'Testimonios', navCta: 'Comprar plan',
     heroEyebrow: 'Entrenamiento online · Rutinas por WhatsApp y email',
     heroTitle1: 'Entrená donde', heroTitle2: 'estés.',
-    heroSub: 'Tres planes de entrenamiento diseñados por Romi Garino.',
-    heroCta: 'Ver planes', heroCta2: 'Conocé a Romi',
+    heroSub: 'Tres planes de entrenamiento diseñados por Romina Garino.',
+    heroCta: 'Ver planes', heroCta2: 'Conocé a Romina',
     plansTitle: 'Elegí tu plan',
     perMonth: '/ mes', buy: 'Suscribirme', mpNote: 'Pago seguro vía Mercado Pago',
     deliveryNote: 'Todas las rutinas se envían por WhatsApp o email dentro de las 24 h de la compra.',
     aboutEyebrow: 'La marca', statYears: 'Años entrenando', statAthletes: 'Alumnos', statPlans: 'Planes online',
-    aboutP1: 'Coach de cross training y fitness funcional. Romi diseña cada rutina para que progreses con el material que tengas a mano, sin excusas.',
+    aboutP1: 'Coach de cross training y fitness funcional. Romina diseña cada rutina para que progreses con el material que tengas a mano, sin excusas.',
     testiTitle: 'Lo que dicen',
     footTitle: '¿Dudas antes de empezar?',
     footSub: 'Escribinos por WhatsApp y te ayudamos a elegir el plan según tu material y tu nivel.',
@@ -49,21 +49,21 @@ const I18N = {
     ],
     testimonios: [
       { name: 'Virginia', plan: 'Home Pro', text: 'Los cambios se notan mucho más rápido.' },
-      { name: 'Mauro', plan: 'Battle Fox Online', text: 'Empecé desde cero y hoy entreno 4 veces por semana. Romi responde siempre.' },
+      { name: 'Mauro', plan: 'Battle Fox Online', text: 'Empecé desde cero y hoy entreno 4 veces por semana. Romina responde siempre.' },
       { name: 'Marian', plan: 'Home Básico', text: 'Encontré la manera de entrenar en casa y no perder el ritmo.' }
     ]
   },
   en: {
-    navPlans: 'Plans', navAbout: 'About Romi', navTesti: 'Testimonials', navCta: 'Buy a plan',
+    navPlans: 'Plans', navAbout: 'About Romina', navTesti: 'Testimonials', navCta: 'Buy a plan',
     heroEyebrow: 'Online training · Routines via WhatsApp & email',
     heroTitle1: 'Train wherever', heroTitle2: 'you are.',
-    heroSub: 'Three training plans designed by Romi Garino.',
-    heroCta: 'See plans', heroCta2: 'Meet Romi',
+    heroSub: 'Three training plans designed by Romina Garino.',
+    heroCta: 'See plans', heroCta2: 'Meet Romina',
     plansTitle: 'Pick your plan',
     perMonth: '/ mo', buy: 'Subscribe', mpNote: 'Secure checkout via Mercado Pago',
     deliveryNote: 'All routines are delivered via WhatsApp or email within 24 h of purchase.',
     aboutEyebrow: 'The brand', statYears: 'Years coaching', statAthletes: 'Athletes', statPlans: 'Online plans',
-    aboutP1: 'Cross-training and functional fitness coach. Romi designs every routine so you can progress with whatever gear you have — no excuses.',
+    aboutP1: 'Cross-training and functional fitness coach. Romina designs every routine so you can progress with whatever gear you have — no excuses.',
     testiTitle: 'What they say',
     footTitle: 'Questions before starting?',
     footSub: 'Message us on WhatsApp and we’ll help you pick a plan based on your gear and level.',
@@ -78,7 +78,7 @@ const I18N = {
     ],
     testimonios: [
       { name: 'Virginia', plan: 'Home Pro', text: 'The results show up so much faster.' },
-      { name: 'Mauro', plan: 'Battle Fox Online', text: 'I started from zero and now train 4 times a week. Romi always answers.' },
+      { name: 'Mauro', plan: 'Battle Fox Online', text: 'I started from zero and now train 4 times a week. Romina always answers.' },
       { name: 'Marian', plan: 'Home Básico', text: 'I found a way to train at home without losing momentum.' }
     ]
   }
