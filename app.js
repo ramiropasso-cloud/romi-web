@@ -7,10 +7,10 @@ const CONFIG = {
   // "pos" (opcional) es el object-position del recorte, por si una foto
   // necesita mostrar más de un costado (ej: la cara queda a un lado).
   fotos: [
-    { src: 'assets/hero-1.jpg', alt: 'Romi entrenando' },
     { src: 'assets/hero-2.jpg', alt: 'Romi entrenando' },
     { src: 'assets/hero-3.jpg', alt: 'Romi entrenando', pos: '78% center' },
-    { src: 'assets/hero-4.jpg', alt: 'Romi entrenando' }
+    { src: 'assets/hero-4.jpg', alt: 'Romi entrenando' },
+    { src: 'assets/hero-5.jpg', alt: 'Romi entrenando' }
   ],
   slideSegundos: 4,                     // cada cuánto cambia la foto
   pagos: {
