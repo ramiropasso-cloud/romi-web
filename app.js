@@ -4,12 +4,13 @@
 const CONFIG = {
   whatsapp: '5492302354724',            // sin + ni espacios
   // Fotos del slider del header. Agregá o sacá las que quieras.
+  // "pos" (opcional) es el object-position del recorte, por si una foto
+  // necesita mostrar más de un costado (ej: la cara queda a un lado).
   fotos: [
     { src: 'assets/hero-1.jpg', alt: 'Romi entrenando' },
     { src: 'assets/hero-2.jpg', alt: 'Romi entrenando' },
-    { src: 'assets/hero-3.jpg', alt: 'Romi entrenando' },
-    { src: 'assets/hero-4.jpg', alt: 'Romi entrenando' },
-    { src: 'assets/hero-5.jpg', alt: 'Romi entrenando' }
+    { src: 'assets/hero-3.jpg', alt: 'Romi entrenando', pos: '78% center' },
+    { src: 'assets/hero-4.jpg', alt: 'Romi entrenando' }
   ],
   slideSegundos: 4,                     // cada cuánto cambia la foto
   pagos: {
@@ -139,8 +140,9 @@ function render() {
     const img = document.createElement('img');
     img.src = f.src;
     img.alt = f.alt || '';
+    if (f.pos) img.style.objectPosition = f.pos;
     if (i === 0) img.className = 'is-active';
-    frame.prepend(img);
+    frame.appendChild(img);
 
     const dot = document.createElement('button');
     dot.type = 'button';
