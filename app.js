@@ -33,6 +33,12 @@ const I18N = {
     plansTitle: 'Elegí tu plan',
     perMonth: '/ mes', buy: 'Suscribirme', mpNote: 'Pago seguro vía Mercado Pago',
     deliveryNote: 'Todas las rutinas se envían por WhatsApp o email dentro de las 24 h de la compra.',
+    moreTitle: '¿Querés conocer más?',
+    moreDesc: 'Un vistazo rápido a cómo funciona cada plan antes de sumarte.',
+    moreLink: 'Conocer más',
+    moreModalTitle: 'Cómo funcionan los planes',
+    moreModalText: 'Acá vas a encontrar el detalle completo de cada plan: contenido, seguimiento y beneficios. Información completa muy pronto.',
+    moreModalClose: 'Cerrar',
     aboutEyebrow: 'La marca', statYears: 'Años entrenando', statAthletes: 'Alumnos', statPlans: 'Planes online',
     aboutP1a: 'Coach de crossfit, crosstraining y fitness funcional.',
     aboutOwnerOf: 'dueña de', aboutAnd: 'y',
@@ -44,9 +50,9 @@ const I18N = {
     badgePopular: 'Más elegido',
     planes: [
       { id: 'basico', name: 'Home Básico', price: 40000, desc: 'Entrená con lo que ya tenés en tu casa.',
-        features: ['Rutinas semanales por WhatsApp / email', 'Sin equipamiento obligatorio', 'Lista de material sugerido (bandas, colchoneta, soga) — lo comprás aparte', 'Ajustes según tu progreso'] },
+        features: ['Rutinas semanales por WhatsApp / email', 'Sin equipamiento obligatorio', 'Lista de material sugerido (bandas, colchoneta, soga)', 'Ajustes según tu progreso'] },
       { id: 'battle', name: 'Home Pro', price: 50000, desc: 'El programa online con comunidad y desafíos.', badge: 'popular',
-        features: ['Entrenamiento online 3 días', 'Ranking online', 'Comunidad', 'Seguimos tus objetivos'] },
+        features: ['Entrenamiento online 3 días', 'Comunidad', 'Seguimos tus objetivos'] },
       { id: 'pro', name: 'Battle Fox Online', price: 60000, desc: 'El nivel más alto de acompañamiento, 100% online.', dark: true,
         features: ['Seguimiento personalizado', 'Chat personal prioritario', 'Entrenamiento premium online'] }
     ],
@@ -65,6 +71,12 @@ const I18N = {
     plansTitle: 'Pick your plan',
     perMonth: '/ mo', buy: 'Subscribe', mpNote: 'Secure checkout via Mercado Pago',
     deliveryNote: 'All routines are delivered via WhatsApp or email within 24 h of purchase.',
+    moreTitle: 'Want to know more?',
+    moreDesc: 'A quick look at how each plan works before you join.',
+    moreLink: 'Learn more',
+    moreModalTitle: 'How the plans work',
+    moreModalText: 'Here you’ll find the full detail of each plan: content, follow-up, and benefits. Full information coming soon.',
+    moreModalClose: 'Close',
     aboutEyebrow: 'The brand', statYears: 'Years coaching', statAthletes: 'Athletes', statPlans: 'Online plans',
     aboutP1a: 'CrossFit, cross-training, and functional fitness coach.',
     aboutOwnerOf: 'owner of', aboutAnd: 'and',
@@ -76,9 +88,9 @@ const I18N = {
     badgePopular: 'Most popular',
     planes: [
       { id: 'basico', name: 'Home Básico', price: 40000, desc: 'Train with what you already have at home.',
-        features: ['Weekly routines via WhatsApp / email', 'No mandatory equipment', 'Suggested gear list (bands, mat, rope) — purchased separately', 'Adjustments as you progress'] },
+        features: ['Weekly routines via WhatsApp / email', 'No mandatory equipment', 'Suggested gear list (bands, mat, rope)', 'Adjustments as you progress'] },
       { id: 'battle', name: 'Home Pro', price: 50000, desc: 'The online program with community and challenges.', badge: 'popular',
-        features: ['Online training, 3 days a week', 'Online ranking', 'Community', 'We track your goals'] },
+        features: ['Online training, 3 days a week', 'Community', 'We track your goals'] },
       { id: 'pro', name: 'Battle Fox Online', price: 60000, desc: 'Our highest level of coaching, fully online.', dark: true,
         features: ['Personalized follow-up', 'Priority personal chat', 'Premium online training'] }
     ],
@@ -102,6 +114,11 @@ function render() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     if (t[key]) el.textContent = t[key];
+  });
+
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const key = el.dataset.i18nAria;
+    if (t[key]) el.setAttribute('aria-label', t[key]);
   });
 
   document.getElementById('lang-toggle').textContent = lang === 'en' ? 'ES' : 'EN';
@@ -177,5 +194,23 @@ document.getElementById('lang-toggle').addEventListener('click', () => {
   lang = lang === 'en' ? 'es' : 'en';
   render();
 });
+
+/* =========================================================
+   MODAL "CONOCER MÁS"
+   ========================================================= */
+(function moreInfoModal() {
+  const modal = document.getElementById('more-info-modal');
+  const openBtn = document.getElementById('more-info-btn');
+  const closeBtn = document.getElementById('more-info-close');
+  if (!modal || !openBtn) return;
+
+  function open() { modal.hidden = false; }
+  function close() { modal.hidden = true; }
+
+  openBtn.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+  modal.addEventListener('click', e => { if (e.target === modal) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) close(); });
+})();
 
 render();

@@ -158,6 +158,40 @@ nav {
 .delivery-note { margin: 20px 4px 0; font-size: 13px; color: #777777; display: flex; align-items: center; gap: 8px; }
 .dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: #111111; }
 
+/* ---------- CONOCER MÁS ---------- */
+.more-info { padding-top: 0; text-align: center; }
+.more-info-box {
+  max-width: 620px; margin: 0 auto; padding: 48px 40px;
+  border: 1px solid #e2e2e2;
+}
+.more-info-title {
+  margin: 0 0 12px; font-family: 'Oswald', sans-serif; font-weight: 600;
+  font-size: 24px; letter-spacing: .02em; text-transform: uppercase;
+}
+.more-info-desc { margin: 0 0 28px; font-size: 14px; line-height: 1.6; color: #666666; text-wrap: pretty; }
+
+/* ---------- MODAL ---------- */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 200; background: rgba(17,17,17,.6);
+  display: flex; align-items: center; justify-content: center; padding: 20px;
+}
+.modal-overlay[hidden] { display: none; }
+.modal-box {
+  position: relative; width: 100%; max-width: 480px; background: #ffffff;
+  padding: 44px 36px; text-align: left;
+}
+.modal-box h3 {
+  margin: 0 0 14px; font-family: 'Oswald', sans-serif; font-weight: 600;
+  font-size: 22px; letter-spacing: .02em; text-transform: uppercase; padding-right: 24px;
+}
+.modal-box p { margin: 0; font-size: 14.5px; line-height: 1.7; color: #555555; text-wrap: pretty; }
+.modal-close {
+  position: absolute; top: 14px; right: 16px; width: 32px; height: 32px;
+  border: none; background: none; font-size: 24px; line-height: 1; color: #111111;
+  cursor: pointer; transition: color .2s;
+}
+.modal-close:hover { color: #ea580c; }
+
 /* ---------- SOBRE ---------- */
 .about { background: #f6f6f4; scroll-margin-top: 64px; }
 .about-inner {

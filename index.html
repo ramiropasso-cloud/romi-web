@@ -58,6 +58,24 @@
   <p class="delivery-note"><span class="dot"></span><span data-i18n="deliveryNote">Todas las rutinas se envían por WhatsApp o email dentro de las 24 h de la compra.</span></p>
 </section>
 
+<!-- ============ CONOCER MÁS ============ -->
+<section class="section more-info">
+  <div class="more-info-box">
+    <h3 class="more-info-title" data-i18n="moreTitle">¿Querés conocer más?</h3>
+    <p class="more-info-desc" data-i18n="moreDesc">Un vistazo rápido a cómo funciona cada plan antes de sumarte.</p>
+    <button type="button" class="btn btn-ghost" id="more-info-btn" data-i18n="moreLink">Conocer más</button>
+  </div>
+</section>
+
+<!-- Modal de preview -->
+<div class="modal-overlay" id="more-info-modal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="more-info-modal-title">
+    <button type="button" class="modal-close" id="more-info-close" data-i18n-aria="moreModalClose" aria-label="Cerrar">&times;</button>
+    <h3 id="more-info-modal-title" data-i18n="moreModalTitle">Cómo funcionan los planes</h3>
+    <p data-i18n="moreModalText">Acá vas a encontrar el detalle completo de cada plan: contenido, seguimiento y beneficios. Información completa muy pronto.</p>
+  </div>
+</div>
+
 <!-- ============ SOBRE ============ -->
 <section id="sobre" class="about">
   <div class="about-inner">
