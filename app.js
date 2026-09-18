@@ -17,7 +17,10 @@ const CONFIG = {
     basico: 'https://mpago.la/2PDgEeE',
     battle: 'https://mpago.la/28miEBH',   // se muestra como "Home Pro"
     pro:    'https://mpago.la/2D7r1RD'    // se muestra como "Battle Fox Online"
-  }
+  },
+  // Portal de alumnas/os (repo aparte "romina-portal-alumno").
+  // Actualizar cuando esté publicado, ej. https://app.rominagarino.com
+  portalUrl: 'https://app.rominagarino.com'
 };
 
 /* =========================================================
@@ -25,7 +28,7 @@ const CONFIG = {
    ========================================================= */
 const I18N = {
   es: {
-    navPlans: 'Planes', navAbout: 'Sobre Romina', navTesti: 'Testimonios', navCta: 'Comprar plan',
+    navPlans: 'Planes', navAbout: 'Sobre Romina', navTesti: 'Testimonios', navMyPlan: 'Mi plan', navCta: 'Comprar plan',
     heroEyebrow: 'Entrenamiento online · Rutinas por WhatsApp y email',
     heroTitle1: 'Entrená donde', heroTitle2: 'estés.',
     heroSub: 'Tres planes de entrenamiento diseñados por Romina Garino.',
@@ -39,6 +42,9 @@ const I18N = {
     moreModalTitle: 'Cómo funcionan los planes',
     moreModalText: 'Acá vas a encontrar el detalle completo de cada plan: contenido, seguimiento y beneficios. Información completa muy pronto.',
     moreModalClose: 'Cerrar',
+    myPlanTitle: '¿Ya sos alumna o alumno?',
+    myPlanDesc: 'Entrá a tu portal para ver tu plan de la semana, marcar tus entrenamientos y el estado de tu cuota.',
+    myPlanCta: 'Entrar a mi plan',
     aboutEyebrow: 'La marca', statYears: 'Años entrenando', statAthletes: 'Alumnos', statPlans: 'Planes online',
     aboutP1a: 'Coach de crossfit, crosstraining y fitness funcional.',
     aboutOwnerOf: 'dueña de', aboutAnd: 'y',
@@ -63,7 +69,7 @@ const I18N = {
     ]
   },
   en: {
-    navPlans: 'Plans', navAbout: 'About Romina', navTesti: 'Testimonials', navCta: 'Buy a plan',
+    navPlans: 'Plans', navAbout: 'About Romina', navTesti: 'Testimonials', navMyPlan: 'My plan', navCta: 'Buy a plan',
     heroEyebrow: 'Online training · Routines via WhatsApp & email',
     heroTitle1: 'Train wherever', heroTitle2: 'you are.',
     heroSub: 'Three training plans designed by Romina Garino.',
@@ -77,6 +83,9 @@ const I18N = {
     moreModalTitle: 'How the plans work',
     moreModalText: 'Here you’ll find the full detail of each plan: content, follow-up, and benefits. Full information coming soon.',
     moreModalClose: 'Close',
+    myPlanTitle: 'Already a student?',
+    myPlanDesc: 'Log into your portal to see this week’s plan, check off your workouts, and your payment status.',
+    myPlanCta: 'Go to my plan',
     aboutEyebrow: 'The brand', statYears: 'Years coaching', statAthletes: 'Athletes', statPlans: 'Online plans',
     aboutP1a: 'CrossFit, cross-training, and functional fitness coach.',
     aboutOwnerOf: 'owner of', aboutAnd: 'and',
@@ -125,6 +134,7 @@ function render() {
 
   const wa = 'https://wa.me/' + CONFIG.whatsapp;
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = wa; });
+  document.querySelectorAll('[data-portal]').forEach(a => { a.href = CONFIG.portalUrl; });
 
   document.getElementById('plans').innerHTML = t.planes.map(p => {
     const badge = p.badge === 'popular' ? t.badgePopular : '';

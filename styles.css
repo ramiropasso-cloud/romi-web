@@ -170,6 +170,20 @@ nav {
 }
 .more-info-desc { margin: 0 0 28px; font-size: 14px; line-height: 1.6; color: #666666; text-wrap: pretty; }
 
+/* ---------- MI PLAN ---------- */
+.my-plan { padding-top: 0; text-align: center; }
+.my-plan-box {
+  max-width: 620px; margin: 0 auto; padding: 48px 40px;
+  background: #111111; color: #ffffff;
+}
+.my-plan-title {
+  margin: 0 0 12px; font-family: 'Oswald', sans-serif; font-weight: 600;
+  font-size: 24px; letter-spacing: .02em; text-transform: uppercase;
+}
+.my-plan-desc { margin: 0 0 28px; font-size: 14px; line-height: 1.6; color: #b5b5b5; text-wrap: pretty; }
+.my-plan-box .btn-dark { background: #ea580c; }
+.my-plan-box .btn-dark:hover { background: #ffffff; color: #111111; }
+
 /* ---------- MODAL ---------- */
 .modal-overlay {
   position: fixed; inset: 0; z-index: 200; background: rgba(17,17,17,.6);
