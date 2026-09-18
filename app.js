@@ -19,8 +19,8 @@ const CONFIG = {
     pro:    'https://mpago.la/2D7r1RD'    // se muestra como "Battle Fox Online"
   },
   // Portal de alumnas/os (repo aparte "romina-portal-alumno").
-  // Actualizar cuando esté publicado, ej. https://app.rominagarino.com
-  portalUrl: 'https://app.rominagarino.com'
+  // Cuando tengas el dominio propio (ej. app.rominagarino.com), actualizar acá.
+  portalUrl: 'https://ramiropasso-cloud.github.io/romina-portal-alumno/'
 };
 
 /* =========================================================
