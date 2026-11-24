@@ -158,6 +158,15 @@ nav {
 .delivery-note { margin: 20px 4px 0; font-size: 13px; color: #777777; display: flex; align-items: center; gap: 8px; }
 .dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: #111111; }
 
+/* ---------- EBOOK ---------- */
+.ebook { padding-top: 0; text-align: center; }
+.ebook-box {
+  max-width: 620px; margin: 0 auto; padding: 48px 40px;
+  border: 1px solid #e2e2e2;
+}
+.ebook-banner { display: block; width: 100%; max-width: 440px; margin: 0 auto 24px; height: auto; }
+.ebook-desc { margin: 0 0 28px; font-size: 14px; line-height: 1.6; color: #666666; text-wrap: pretty; }
+
 /* ---------- CONOCER MÁS ---------- */
 .more-info { padding-top: 0; text-align: center; }
 .more-info-box {

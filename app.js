@@ -20,7 +20,9 @@ const CONFIG = {
   },
   // Portal de alumnas/os (repo aparte "romina-portal-alumno").
   // Cuando tengas el dominio propio (ej. app.rominagarino.com), actualizar acá.
-  portalUrl: 'https://ramiropasso-cloud.github.io/romina-portal-alumno/'
+  portalUrl: 'https://ramiropasso-cloud.github.io/romina-portal-alumno/',
+  // Link de Mercado Pago para la compra del ebook.
+  ebookLink: 'https://mpago.la/1oiop9x'
 };
 
 /* =========================================================
@@ -45,6 +47,8 @@ const I18N = {
     myPlanTitle: '¿Ya sos alumna o alumno?',
     myPlanDesc: 'Entrá a tu portal para ver tu plan de la semana, marcar tus entrenamientos y el estado de tu cuota.',
     myPlanCta: 'Entrar a mi plan',
+    ebookDesc: '8 semanas de entrenamiento y una guía de alimentación simple.',
+    ebookCta: 'Comprar ebook',
     aboutEyebrow: 'La marca', statYears: 'Años entrenando', statAthletes: 'Alumnos', statPlans: 'Planes online',
     aboutP1a: 'Coach de crossfit, crosstraining y fitness funcional.',
     aboutOwnerOf: 'dueña de', aboutAnd: 'y',
@@ -86,6 +90,8 @@ const I18N = {
     myPlanTitle: 'Already a student?',
     myPlanDesc: 'Log into your portal to see this week’s plan, check off your workouts, and your payment status.',
     myPlanCta: 'Go to my plan',
+    ebookDesc: '8 weeks of training plus a simple nutrition guide.',
+    ebookCta: 'Buy the ebook',
     aboutEyebrow: 'The brand', statYears: 'Years coaching', statAthletes: 'Athletes', statPlans: 'Online plans',
     aboutP1a: 'CrossFit, cross-training, and functional fitness coach.',
     aboutOwnerOf: 'owner of', aboutAnd: 'and',
@@ -135,6 +141,7 @@ function render() {
   const wa = 'https://wa.me/' + CONFIG.whatsapp;
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = wa; });
   document.querySelectorAll('[data-portal]').forEach(a => { a.href = CONFIG.portalUrl; });
+  document.querySelectorAll('[data-ebook]').forEach(a => { a.href = CONFIG.ebookLink; });
 
   document.getElementById('plans').innerHTML = t.planes.map(p => {
     const badge = p.badge === 'popular' ? t.badgePopular : '';
